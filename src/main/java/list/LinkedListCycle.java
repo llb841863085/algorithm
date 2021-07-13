@@ -63,7 +63,7 @@ public class LinkedListCycle {
     /**
      * LeetCode142的要求是：在141的基础上，如果存在环，则返回链表开始入环的第一个节点。
      *
-     * @param head 头结点
+     * @param head 头节点
      * @return 环的首结点
      */
     public static Node detectCycle(Node head) {
@@ -92,7 +92,7 @@ public class LinkedListCycle {
     /**
      * 链表打印
      *
-     * @param head 头结点
+     * @param head 头节点
      */
     public static String toString(Node head) {
         Node current = head;

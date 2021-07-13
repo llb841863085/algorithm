@@ -111,7 +111,7 @@ public class LinkedListBasicUse {
     /**
      * 链表打印
      *
-     * @param head 头结点
+     * @param head 头节点
      */
     public static String toString(Node head) {
         Node current = head;

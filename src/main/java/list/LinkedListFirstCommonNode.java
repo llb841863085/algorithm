@@ -247,7 +247,7 @@ public class LinkedListFirstCommonNode {
     /**
      * 链表打印
      *
-     * @param head 头结点
+     * @param head 头节点
      */
     public static String toString(Node head) {
         StringBuilder sb = new StringBuilder();

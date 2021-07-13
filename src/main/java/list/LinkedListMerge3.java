@@ -93,7 +93,7 @@ public class LinkedListMerge3 {
      */
     public static Node mergeKsLists2(Node[] lists) {
         Queue<Node> pq = new PriorityQueue<>(Comparator.comparingInt(v -> v.data));
-        // 把头结点放到小根堆
+        // 把头节点放到小根堆
         for (Node node : lists) {
             if (node != null) {
                 pq.offer(node);
@@ -262,7 +262,7 @@ public class LinkedListMerge3 {
     /**
      * 链表打印
      *
-     * @param head 头结点
+     * @param head 头节点
      */
     public static String toString(Node head) {
         StringBuilder sb = new StringBuilder();

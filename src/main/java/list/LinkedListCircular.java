@@ -108,7 +108,7 @@ public class LinkedListCircular {
     public static Node insertFirstNode(Node head, Node insertNode) {
         Node lastNode = getLastNode(head);
         insertNode.next = head;
-        //新插入的最后一个节点指向头结点
+        //新插入的最后一个节点指向头节点
         lastNode.next = insertNode;
         return insertNode;
     }
@@ -122,7 +122,7 @@ public class LinkedListCircular {
     public static Node insertNode(Node head, Node insertNode) {
         Node lastNode = getLastNode(head);
         lastNode.next = insertNode;
-        //新插入的最后一个节点指向头结点
+        //新插入的最后一个节点指向头节点
         insertNode.next = head;
         return head;
     }
@@ -134,7 +134,7 @@ public class LinkedListCircular {
      * @param deleteNode 待删除节点
      */
     public static Node deleteNode(Node head, Node deleteNode) {
-        // 如果需要删除头结点
+        // 如果需要删除头节点
         Node lastNode = getLastNode(head);
         while (head.data == deleteNode.data) {
             head = head.next;
@@ -158,7 +158,7 @@ public class LinkedListCircular {
     /**
      * 链表打印
      *
-     * @param head 头结点
+     * @param head 头节点
      */
     public static String toString(Node head) {
         if (head == null) {
