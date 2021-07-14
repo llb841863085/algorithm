@@ -80,21 +80,15 @@ public class LinkedListReverse2 {
         //三个辅助指针用于反转
         //指向m
         Node mNode = (mPre == null) ? head : mPre.next;
-        Node current = mNode.next;
+        //开始反转，循环结束，node1指向n
+        Node newHead = reverse(mNode, nNext);
         //m的next指向n的next
         mNode.next = nNext;
-        //开始反转，循环结束，node1指向n
-        while (current != nNext) {
-            Node temp = current.next;
-            current.next = mNode;
-            mNode = current;
-            current = temp;
-        }
         //判断是否换头，根据m是否为head
         if (mPre == null) {
-            return mNode;
+            return newHead;
         } else {
-            mPre.next = mNode;
+            mPre.next = newHead;
             return head;
         }
     }
