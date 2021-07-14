@@ -1,5 +1,7 @@
 package list;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Objects;
 import java.util.Random;
 
@@ -19,6 +21,9 @@ public class LinkedListReverse {
         Node head2 = initLinkedList(20);
         System.out.println(toString(head2));
         System.out.println(toString(reverseList2(head2)));
+        Node head3 = initLinkedList(15);
+        System.out.println(toString(head3));
+        System.out.println(toString(reverseList3(head3)));
     }
 
     /**
@@ -64,6 +69,29 @@ public class LinkedListReverse {
         return reverse(prev, cur);
     }
 
+    /**
+     * 栈的方式
+     *
+     * @param head 链表头节点
+     * @return 反转后结果
+     */
+    public static Node reverseList3(Node head) {
+        Deque<Node> nodes = new ArrayDeque<>();
+        Node current = head;
+        while (current != null) {
+            // 保存下一个节点
+            nodes.push(current);
+            current = current.next;
+        }
+        Node headResult = new Node(-1);
+        current = headResult;
+        while (!nodes.isEmpty()) {
+            current.next = nodes.pop();
+            current = current.next;
+            current.next = null;
+        }
+        return headResult.next;
+    }
 
     private static Node initLinkedList(int n) {
         int currentData = RANDOM.nextInt(10);
