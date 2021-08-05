@@ -1,6 +1,6 @@
 package list;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * 有序链表合并
@@ -9,7 +9,7 @@ import java.util.Random;
  * @since 2021-07-09
  **/
 public class LinkedListMerge2 {
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public static void main(String[] args) {
         Node head11 = initLinkedList(5);
@@ -229,7 +229,7 @@ public class LinkedListMerge2 {
     }
 
     static class Node {
-        int data;
+        final int data;
         Node next;
 
         public Node(int data) {

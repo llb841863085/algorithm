@@ -1,9 +1,9 @@
 package list;
 
+import java.security.SecureRandom;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Random;
 
 /**
  * 合并K个有序链表
@@ -13,7 +13,7 @@ import java.util.Random;
  * @since 2021-07-09
  **/
 public class LinkedListMerge3 {
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public static void main(String[] args) {
         Node[] heads1 = initLinkedList();
@@ -274,7 +274,7 @@ public class LinkedListMerge3 {
     }
 
     static class Node {
-        int data;
+        final int data;
         Node next;
 
         public Node(int data) {

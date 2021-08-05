@@ -91,6 +91,6 @@ public class AsciiConversion {
         //技巧二：使用StringBuffer的reverse()方法，让原本麻烦的转置瞬间美好
         sb.reverse();
         //技巧三：最后处理正负，不要从一开始就揉在一起。
-        return (flag ? "-" : "") + sb.toString();
+        return (flag ? "-" : "") + sb;
     }
 }

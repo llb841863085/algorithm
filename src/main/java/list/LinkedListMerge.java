@@ -1,6 +1,6 @@
 package list;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * 两个有序链表的合并
@@ -9,7 +9,7 @@ import java.util.Random;
  * @since 2021-07-01
  **/
 public class LinkedListMerge {
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public static void main(String[] args) {
         Node head11 = initLinkedList(5);
@@ -35,6 +35,20 @@ public class LinkedListMerge {
         Node head42 = initLinkedList(5);
         System.out.println("初始化链表42：\t" + toString(head42));
         System.out.println("合并后链表40：\t" + toString(mergeLinkedList1(head41, head42)));
+    }
+
+    /**
+     * 链表打印
+     *
+     * @param head 头节点
+     */
+    public static String toString(Node head) {
+        StringBuilder sb = new StringBuilder();
+        while (head != null) {
+            sb.append(head.data).append("\t");
+            head = head.next;
+        }
+        return sb.toString();
     }
 
     private static Node mergeLinkedList1(Node head1, Node head2) {
@@ -121,22 +135,8 @@ public class LinkedListMerge {
         return head;
     }
 
-    /**
-     * 链表打印
-     *
-     * @param head 头节点
-     */
-    public static String toString(Node head) {
-        StringBuilder sb = new StringBuilder();
-        while (head != null) {
-            sb.append(head.data).append("\t");
-            head = head.next;
-        }
-        return sb.toString();
-    }
-
     static class Node {
-        int data;
+        final int data;
         Node next;
 
         public Node(int data) {

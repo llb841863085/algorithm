@@ -148,6 +148,6 @@ public class RingBuffer {
             sb.append(i).append("=").append(list[i]).append("\t");
         }
         sb.append("\n打印环形缓冲区结束");
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

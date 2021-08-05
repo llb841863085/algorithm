@@ -259,7 +259,7 @@ public class LinkedListFirstCommonNode {
     }
 
     static class Node {
-        int data;
+        final int data;
 
         Node next;
 

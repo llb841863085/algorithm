@@ -76,8 +76,8 @@ public class PropertiesFileLoad {
     }
 
     static class Node {
-        int data;
-        Node next;
+        final int data;
+        final Node next;
 
         public Node(int data) {
             this.data = data;

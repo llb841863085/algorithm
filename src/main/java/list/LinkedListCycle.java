@@ -106,7 +106,7 @@ public class LinkedListCycle {
     }
 
     static class Node {
-        int data;
+        final int data;
         Node next;
 
         public Node(int data) {

@@ -1,9 +1,9 @@
 package list;
 
+import java.security.SecureRandom;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Objects;
-import java.util.Random;
 
 /**
  * 链表反转
@@ -12,7 +12,7 @@ import java.util.Random;
  * @since 2021-07-12
  **/
 public class LinkedListReverse {
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public static void main(String[] args) {
         Node head = initLinkedList(10);
@@ -120,7 +120,7 @@ public class LinkedListReverse {
     }
 
     static class Node {
-        int data;
+        final int data;
 
         Node next;
 
